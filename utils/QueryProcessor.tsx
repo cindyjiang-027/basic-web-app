@@ -12,8 +12,17 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
-  if (query.toLowerCase().includes("What is your name")) {
+  if (query.toLowerCase().includes("what is your name")) {
     return "Rohan";
+  }
+
+  const addMatch2 = query.match(/What is (\d+) plus (\d+) plus (\d+)/);
+  if (addMatch2) {
+    const x: number = parseInt(addMatch2[1]);
+    const y: number = parseInt(addMatch2[2]);
+    const z: number = parseInt(addMatch2[3]);
+    var sum = x + y + z;
+    return (sum).toString();
   }
 
   const addMatch = query.match(/What is (\d+) plus (\d+)/);
