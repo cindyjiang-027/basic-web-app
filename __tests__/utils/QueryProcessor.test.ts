@@ -25,4 +25,13 @@ describe("QueryProcessor", () => {
             "I do not have an Andrew ID, but I am a bot created by a student."
           ));
     });
+
+    test('should return name information', () => {
+      const query = "name";
+      const response: string = QueryProcessor(query);
+      expect(response).toBe((
+          "Cindy."
+        ));
+  });
+
 });
