@@ -27,10 +27,10 @@ describe("QueryProcessor", () => {
     });
 
     test('should return name information', () => {
-      const query = "What is your name?";
+      const query = "name";
       const response: string = QueryProcessor(query);
       expect(response).toBe((
-          "Rohan."
+          "Cindy."
         ));
   });
 
